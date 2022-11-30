@@ -25,7 +25,10 @@ class BathroomForm(forms.Form):
     
 
 class ContactForm(forms.Form):
-        address = forms.CharField(widget=forms.RadioSelect(choices=ZIPCODES))
+        customer_name = forms.CharField() 
+        customer_email = forms.CharField()
+        zipcode = forms.CharField()
+
     #     address = forms.CharField(
     #     max_length=100,
     #     widget=forms.Select(choices=ZIPCODES),

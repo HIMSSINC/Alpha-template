@@ -23,11 +23,13 @@ class multistepformsubmission(SessionWizardView):
             detail_1 = form_data[0]['detail_1'], 
             detail_2 = form_data[1]['detail_2'],
             detail_3 = form_data[1]['detail_3'], 
-            address = form_data[2]['address'])
+            zipcode = form_data[2]['zipcode'],
+            customer_name = form_data[2]['customer_name'],
+            customer_email = form_data[2]['customer_email'])
 
         new_lead.job = "Bathroom"
         new_lead.save()
 
-        return render(self.request, 'home.html', {'data': form_data})
+        return render(self.request, 'leadcompletion.html')
 
     
