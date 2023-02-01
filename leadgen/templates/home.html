@@ -1,10 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="homecontainer">
-    <h1>Home Page</h1>
-    <br>
-    
-    <a href="{% url 'bathroom' %}" class="btn btn-primary">Bathroom</a>
+<br>
+<div class="newcontainer" data-type="home">
+    <p class="titletwo">Make Your Dream Project A Reality!</p>
+    <a href="{% url 'acousticceilings' %}" class="btn11">Acoustic ceilings</a>
+    <a href="{% url 'bathroom' %}" class="btn11">Bathroom</a>
+    <a href="{% url 'flooring' %}" class="btn11">Flooring</a>
+    <a href="{% url 'homebuilder' %}" class="btn11">Homebuilder</a>
+    <a href="{% url 'landscaping' %}" class="btn11">Landscaping</a>
+    <a href="{% url 'roofing' %}" class="btn11">Roofing</a>
+    <a href="{% url 'stonetile' %}" class="btn11">Stone & Tile</a>
+    <a href="{% url 'swimmingpool' %}" class="btn11">Swimmingpool</a>
 </div>
 {% endblock %}

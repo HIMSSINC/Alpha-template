@@ -22,7 +22,13 @@ urlpatterns = [
 
     path('', views.home, name='home'),
 
-    path('bathroom/', views.multistepformsubmission.as_view(), name='bathroom'),
-    # path('formsubmission/', views.multistepformsubmission.as_view(), name='msfs'),
+    path('acousticceilings/', views.multistepformsubmissionacousticceilings.as_view(), name='acousticceilings'),
+    path('bathroom/', views.multistepformsubmissionbathroom.as_view(), name='bathroom'),
+    path('flooring/', views.multistepformsubmissionflooring.as_view(), name='flooring'),
+    path('homebuilder/', views.multistepformsubmissionhomebuilder.as_view(), name='homebuilder'),
+    path('landscaping/', views.multistepformsubmissionlandscaping.as_view(), name='landscaping'),
+    path('roofing/', views.multistepformsubmissionroofing.as_view(), name='roofing'),
+    path('stonetile/', views.multistepformsubmissionstonetile.as_view(), name='stonetile'),
+    path('swimmingpool/', views.multistepformsubmissionswimmingpool.as_view(), name='swimmingpool'),
 
 ]
