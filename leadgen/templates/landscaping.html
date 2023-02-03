@@ -19,7 +19,11 @@
           {% if wizard.form.forms %}
           {{ wizard.form.management_form }}
           {% for form in wizard.form.forms %}
-          {{ form }}
+          <div class="form-element">
+            <label class='large-font-label'>
+              {{ form }}
+            </label>
+          </div>
           {% endfor %}
           {% else %}
           {{ wizard.form }}

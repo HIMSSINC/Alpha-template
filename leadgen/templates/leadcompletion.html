@@ -1,11 +1,14 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <div class="centertext">
-    <h1>Thank You for submitting a lead!</h1>
+    <h1>Thank You, one of our repsentatives will be in contact with you shortly!</h1>
 </div>
 
 <div class="centertext">
+    <img src="{% static 'bensnuts.JPEG' %}" width="400" height="600">
+    <br>
     <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
 </div>
 

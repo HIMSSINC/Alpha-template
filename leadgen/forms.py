@@ -77,8 +77,7 @@ BATHROOM_FIRST_DETAIL = [
     ]
 
 class BathroomForm(forms.Form):
-    detail_1 = forms.CharField(widget=forms.RadioSelect(choices=BATHROOM_FIRST_DETAIL))
-    
+    detail_1 = forms.CharField(label="What you want", widget=forms.RadioSelect(choices=BATHROOM_FIRST_DETAIL, attrs={'class': 'large-font-radio'}))    
 
 
 FLOORING_FIRST_DETAIL = [

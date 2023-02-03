@@ -7,23 +7,30 @@
     
     <h1>Bathroom</h1>
     
-<div class="container">
-  <div class="centertext">
-    <h1>Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }}</h1>
-  </div>
-  <form action="" method="post">{% csrf_token %}
-      <ul>
-          {{ wizard.management_form }}
-          {% if wizard.form.forms %}
-          {{ wizard.form.management_form }}
-          {% for form in wizard.form.forms %}
-          {{ form }}
-          {% endfor %}
-          {% else %}
-          {{ wizard.form }}
-          {% endif %}
-      </ul>
-      <input type="submit" value="Next" class="btn btn-danger"/>
-  </form>
-</div>
+   
+    
+    
+    <div class="container">
+      <div class="centertext">
+        <h1>Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }}</h1>
+      </div>
+      <form action="" method="post">{% csrf_token %}
+          <ul>
+              {{ wizard.management_form }}
+              {% if wizard.form.forms %}
+              {{ wizard.form.management_form }}
+              {% for form in wizard.form.forms %}
+              <div class="form-element">
+                <label class='large-font-label'>
+                  {{ form }}
+                </label>
+              </div>
+              {% endfor %}
+              {% else %}
+              {{ wizard.form }}
+              {% endif %}
+          </ul>
+          <input type="submit" value="Next" class="btn btn-danger"/>
+      </form>
+    </div>
 {% endblock %}
