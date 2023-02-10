@@ -4,32 +4,28 @@
 
 
 {% block content %}
-    <style>
+<style>
     
-    </style>
-    <h1>Landscaping</h1>
-    
-<div class="container">
-  <div class="centertext">
-    <h1>Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }}</h1>
-  </div>
-  <form action="" method="post">{% csrf_token %}
-      <ul>
-          {{ wizard.management_form }}
-          {% if wizard.form.forms %}
-          {{ wizard.form.management_form }}
-          {% for form in wizard.form.forms %}
-          <div class="form-element">
-            <label class='large-font-label'>
-              {{ form }}
-            </label>
-          </div>
-          {% endfor %}
-          {% else %}
-          {{ wizard.form }}
-          {% endif %}
-      </ul>
-      <input type="submit" value="Next" class="btn btn-danger"/>
-  </form>
+</style>
+<h1 class="form-jobname-text">Landscaping</h1>
+
+<div class="full-withradius borderbasic">
+<h1 class="text-for-nextstep">Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }}</h1>
+<form action="" method="post">{% csrf_token %}
+  <ul>
+      {{ wizard.management_form }}
+      {% if wizard.form.forms %}
+      {{ wizard.form.management_form }}
+      {% for form in wizard.form.forms %}
+      <div class="form-element">
+        {{ form }}
+      </div>
+      {% endfor %}
+      {% else %}
+      {{ wizard.form }}
+      {% endif %}
+      <button class="form-next-botton">Next</button>
+  </ul>
+</form>
 </div>
 {% endblock %}
