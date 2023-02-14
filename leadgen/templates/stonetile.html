@@ -12,7 +12,7 @@
 <div class="full-withradius borderbasic">
 <h1 class="text-for-nextstep">Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }}</h1>
 <form action="" method="post">{% csrf_token %}
-  <ul>
+    <ul>
       {{ wizard.management_form }}
       {% if wizard.form.forms %}
       {{ wizard.form.management_form }}
@@ -24,8 +24,8 @@
       {% else %}
       {{ wizard.form }}
       {% endif %}
+      <br>
       <button class="form-next-botton">Next</button>
-  </ul>
 </form>
 </div>
 {% endblock %}

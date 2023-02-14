@@ -11,11 +11,11 @@ class LeadForm(ModelForm):
 ####################################### Basic forms that apply to every lead #######################################
 
 class ContactForm(forms.Form):
-    customer_name = forms.CharField(required=False) 
-    customer_email = forms.CharField(required=False)
-    customer_phone = forms.CharField(required=False)
-    zipcode = forms.CharField(required=False)
-    street = forms.CharField(required=False)
+    customer_name = forms.CharField(label="Name", required=False, widget=forms.TextInput(attrs={'class': 'text-input-contact-form'})) 
+    customer_email = forms.CharField(label="Email", required=False, widget=forms.TextInput(attrs={'class': 'text-input-contact-form'}))
+    customer_phone = forms.CharField(label="Phone Number", required=False, widget=forms.TextInput(attrs={'class': 'text-input-contact-form'}))
+    zipcode = forms.CharField(label="Zipcode", required=False, widget=forms.TextInput(attrs={'class': 'text-input-contact-form'}))
+    street = forms.CharField(label="Address", required=False, widget=forms.TextInput(attrs={'class': 'text-input-contact-form'}))
 
 
 
@@ -38,7 +38,7 @@ class ReadyToHireForm(forms.Form):
     ready_to_hire = forms.CharField(label="Choose the appropriate status for this project", widget=forms.RadioSelect(choices=READY_TO_HIRE))
 
 class CustomeUserInputForm(forms.Form):
-    custome_user_input = forms.CharField(label="Anything else you'd like to tell us?", required=False, widget=forms.Textarea)
+    custome_user_input = forms.CharField(label="Anything else you'd like to tell us?", required=False, widget=forms.TextInput(attrs={'class': 'text-input-custome-message'}))
 
 
 ####################################### Start of all the lead Forms and their options in Alphabtical order #######################################

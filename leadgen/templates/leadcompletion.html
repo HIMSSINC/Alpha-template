@@ -3,13 +3,17 @@
 
 {% block content %}
 <div class="centertext">
-    <h1>Thank You, one of our repsentatives will be in contact with you shortly!</h1>
+    <p class="titletwo">Thank you! You are one step closer to your dream project!</p>
+</div>
+
+<div class="centered-image">
+    <div class="img-box-basic">
+        <img src="{% static 'modern-house-lead-completion-form.JPEG' %}" alt="Modern house" />
+    </div>
 </div>
 
 <div class="centertext">
-    <img src="{% static 'bensnuts.JPEG' %}" width="400" height="600">
-    <br>
-    <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
+    <a href="{% url 'home' %}" class="form-next-botton">Back Home</a>
 </div>
 
 {% endblock %}
